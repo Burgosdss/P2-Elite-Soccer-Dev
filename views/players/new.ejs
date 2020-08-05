@@ -1,0 +1,31 @@
+<%- include('../partials/header')%>
+
+<p>Please first ensure that the Player is not in the dropdown
+    <select>
+        <% players.forEach (function(p) { %>
+                <option><%= p.name %></option>
+            <% }); %>
+    </select>
+</p>
+
+<form id="add-player-form" action="/players" method="POST">
+<label>Name:</label>
+<input type="text" name="name">
+<label>Position:</label>
+ <select name="position">
+   <option value="Goalkeeper">Goalkeeper</option>
+   <option value="Right Fullback">Right Fullback</option>
+   <option value="Left Fullback">Left Fullback</option>
+   <option value="Center Back">Center Back</option>
+   <option value="Center Back or Sweeper">Center Back or Sweeper</option>
+   <option value="Defending/Holding Midfielder">Defending/Holding Midfielder</option>
+   <option value="Right Midfielder/Winger">Right Midfielder/Winger</option>
+   <option value="Central/Box-to-Box Midfielder">Central/Box-to-Box Midfielder</option>
+   <option value="Striker">Striker</option>
+   <option value="Attacking Midfielder/Playmaker">Attacking Midfielder/Playmaker</option>
+   <option value="Left Midfielder/Wingers">Left Midfielder/Wingers</option>
+ </select>
+<input type="submit" value="Add Player">
+</form>
+
+
