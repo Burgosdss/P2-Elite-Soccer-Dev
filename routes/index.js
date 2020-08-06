@@ -5,17 +5,17 @@ router.get('/', function(req, res){
     res.redirect('/customers')
     });
 
-router.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email']}
+router.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }
     ))
 
  router.get('/oauth2callback', passport.authenticate('google', {
-      successRedirect: '/customers',
+      successRedirect: '/teams',
       failureRedirect: '/'
     }
     ));
 
 router.get('/logout', function(req, res){
-    req.logOut();
+    req.logout();
     res.redirect('/');
 });
 

@@ -16,6 +16,7 @@ const teamSchema = new Schema({
         type: String,
         require: true,
     },
+    user:{type: Schema.Types.ObjectId, ref: 'Customer'},
     location:{
         type: String,
         require: true,

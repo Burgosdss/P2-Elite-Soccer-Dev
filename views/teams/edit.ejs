@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+<form id="new-form" action="/teams/update/<%= team._id%>?_method=PUT" method="POST">
+    <label>Team Name:</label>
+    <input type="text" name="teamname">
+    <label>Location:</label>
+    <input type="text" name="location">
+    <label>League</label>
+    <select name="league">
+      <option value="Premier League">Premier League</option>
+      <option value="La Liga">La Liga</option>
+      <option value="Serie A">Serie A</option>
+      <option value="Ligue 1">Ligue 1</option>
+      <option value="Bundesliga">Bundesliga</option>
+    </select>
+    <input type="submit" value="">
+  </form>
+  
+  <%- include('../partials/footer') %>

@@ -1,4 +1,7 @@
 <%- include('../partials/header') %>
+<div id="bg">
+<img src="http://www.paginasiniciais.com.br/img/temas/futebol/gramado_futebol_campo.jpg" alt="">
+</div>
 <section id="show-page">
   <div>Team name: </div>
   <div><%= team.teamname %></div>
@@ -17,6 +20,7 @@
     <%})%>
   </ul>
 </section>
+<a href="/teams/<%= team._id %>/edit">Edit Team</a>
 <form id="add-per-to-roster" action="/teams/<%= team._id %>/players" method="POST">
   <select name="playerId">
     <%- players.map(p => `<option value="${p._id}">${p.name}</option>`).join('') %>

@@ -6,7 +6,9 @@ module.exports = {
   show,
   new: newTeam,
   create,
-  removePlayer
+  removePlayer,
+  edit,
+  updateTeam
 };
 
 function index(req, res) {
@@ -28,6 +30,7 @@ function newTeam(req, res) {
 }
 
 function create(req, res) {
+  req.body.user = req.user._id
   const team = new Team(req.body);
   team.save(function(err) {
     // one way to handle errors
@@ -47,5 +50,18 @@ function removePlayer(req, res){
     });
   });
 }
-
+function edit(req, res) {
+  Team.findById(req.params.id, function (err, team) {
+    if (!team.user.equals(req.user._id)) return res.redirect(`/teams/${team._id}`)
+      res.render(`teams/edit`, {
+        title: "Update Team",
+        team
+      });
+      });
+  }
+function updateTeam(req, res) {
+  Team.findByIdAndUpdate(req.params.id, req.body, function (err, team) {
+      res.redirect(`/teams/${team._id}`)
+  });
+}
 

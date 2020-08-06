@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    font-family: Helvetica;
+    color: #424748;
+  }
+  
+  body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 50px 1fr;
+    grid-template-areas:
+      "nav"
+      "main"
+  }
+  body > main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E8ECEB;
+    padding: 20px;
+    overflow-y: scroll;
+  }
+  #show-page {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 1rem;
+  }
+  
+  .show-page div:nth-child(even) {
+    font-weight: bold;
+  }

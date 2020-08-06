@@ -1,6 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
-const port = process.env.PORT || 3000; 
+const port = process.env.PORT || '3000'; 
 const session = require('express-session');
 const passport = require('passport');
 const indexRouter = require('./routes/index');
