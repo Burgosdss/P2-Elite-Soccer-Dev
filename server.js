@@ -8,6 +8,7 @@ const customersRouter = require('./routes/customers');
 const teamsRouter = require('./routes/teams');
 const reviewsRouter = require('./routes/reviews');
 const playersRouter = require('./routes/players');
+const methodOverride = require('method-override');
 
 require('dotenv').config();
 
@@ -21,6 +22,7 @@ require('./config/passport');
 app.set('view engine', 'ejs');
 
 // Mount Middlawer
+app.use(methodOverride('_method'));
 app.use(express.static('public'));
 app.use(morgan('dev'));
 app.use(express.json());

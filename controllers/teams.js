@@ -5,7 +5,8 @@ module.exports = {
   index,
   show,
   new: newTeam,
-  create
+  create,
+  removePlayer
 };
 
 function index(req, res) {
@@ -36,3 +37,15 @@ function create(req, res) {
     res.redirect(`/teams/${team._id}`);
   });
 }
+
+function removePlayer(req, res){
+  Team.findById(req.params.id, function(err, team){
+    const indexPlayer = team.roster.indexOf(req.params.idp);
+    team.roster.splice(indexPlayer, 1);
+    team.save(function(err){
+    res.redirect(`/teams/${team._id}`)
+    });
+  });
+}
+
+
