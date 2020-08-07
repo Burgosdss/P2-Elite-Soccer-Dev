@@ -1,7 +1,29 @@
-<%- include('../partials/header') %>
-<div id="bg">
-<img src="http://www.paginasiniciais.com.br/img/temas/futebol/gramado_futebol_campo.jpg" alt="">
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+    <!-- Google Fonts -->
+    <link href="href=//fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <!-- Materialize Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS Framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <!-- JavaScript for Materialize -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+  <link rel='stylesheet' href='/css/show.css' />
+
+</head>
+<body>
+  <nav>
+    <a href="/players/new"class="brand-logo left " <%- title === 'Add Player' ? 'class="active"' : '' %>>CREATE PLAYER</a>
+    <a href="/teams/new" class="brand-logo center"<%- title === 'Add Team' ? 'class="active"' : '' %>>CREATE TEAM</a>
+    <a href="/teams"class="brand-logo right" <%- title === 'All Teams' ? 'class="active"' : '' %>>VIEW TEAMS</a>
+  </nav>
+  <main>
+    <h1><%= title %></h1>
+
 <section id="show-page">
   <div>Team name: </div>
   <div><%= team.teamname %></div>
@@ -14,7 +36,7 @@
     <% team.roster.map(p => {%>
     <li>
       <form action="/teams/<%= team._id%>/<%= p._id%>/?_method=DELETE" method="POST">
-      <input type="submit" value="X">
+      <input type="submit" value="🟥">
       </form>
       <%=p.name%> <%=p.position%></li>
     <%})%>

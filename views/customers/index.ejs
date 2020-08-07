@@ -2,24 +2,22 @@
 <html>
 
 <head>
-  <title>Almost before we knew it</title>
   <!-- Google Fonts -->
   <link href="href=//fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
   <!-- Materialize Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!-- Materialize CSS Framework -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/home.css" />
   <!-- JavaScript for Materialize -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
 <body>
-  <div class="field"></div>
   <div class="navbar-fixed">
     <nav>
-      <div class="nav-wrapper gold">
-        <a href="" class="brand-logo left">Almost before we knew it</a>
+      <div class="nav-wrapper">
+        <a href="" class="brand-logo left">“Talent without working hard is nothing.” – Cristiano Ronaldo</a>
             <!-- Place Login UI Here -->
             <ul class="right">
               <li>
@@ -27,7 +25,17 @@
                   <a href="/logout"><i class="material-icons left">trending_flat</i> Log Out</a>
                 <% } else { %>
                   <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
-                <% } %>        
+                <% } %> 
+              </li> 
+            </ul>        
+        </div>
+    </nav>
   </div>
+  <div id="homelogo"><a href="/auth/google">
+    <img  src="images/elite soccer.png" ></a>
+  </div>
+  <form action="/auth/google">
+   <button id="start" >CLICK TO START</button>
+  </form>
 </body>
 </html>

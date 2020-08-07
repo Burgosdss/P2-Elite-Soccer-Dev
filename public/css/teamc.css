@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background: url(/images/stamford-bridge-zoom-background.png) no-repeat center center fixed; 
+    background-position: bottom;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, Helvetica, sans-serif;  
+}
+h1{
+text-align: center;
+}

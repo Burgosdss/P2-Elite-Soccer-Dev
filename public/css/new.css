@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box;
+  }
+body {
+      background: url(/images/Quotation-Cristiano-Ronaldo-Dreams-are-not-what-you-see-in-your-sleep-dreams-81-5-0505.jpg) no-repeat fixed; 
+      background-position: bottom;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        font-family: Arial, Helvetica, sans-serif;  
+}
+h1{
+text-align: center;
+}

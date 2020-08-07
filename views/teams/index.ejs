@@ -1,4 +1,27 @@
-<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+    <!-- Google Fonts -->
+    <link href="href=//fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <!-- Materialize Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Materialize CSS Framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <!-- JavaScript for Materialize -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+  <link rel='stylesheet' href='/css/index.css' />
+
+</head>
+<body>
+  <nav>
+    <a href="/players/new"class="brand-logo left " <%- title === 'Add Player' ? 'class="active"' : '' %>>CREATE PLAYER</a>
+    <a href="/teams/new" class="brand-logo center"<%- title === 'Add Team' ? 'class="active"' : '' %>>CREATE TEAM</a>
+  </nav>
+  <main>
+    <h1><%= title %></h1>
 
 <table id="list">
   <thead>
@@ -18,5 +41,4 @@
       <% }); %>
     </tbody>
   </table>
-  
 <%- include('../partials/footer') %>

@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+    font-family: Helvetica;
+    color: #424748;
+}
+body{
+
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+font-family: Arial, Helvetica, sans-serif;  
+}
+    
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}

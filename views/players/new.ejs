@@ -1,4 +1,19 @@
-<%- include('../partials/header')%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/css/new.css' />
+  <title><%= title %></title>
+</head>
+<body>
+  <nav>
+    <a href="/teams/new" <%- title === 'Add Team' ? 'class="active"' : '' %>>ADD TEAM</a>
+    <a href="/teams" <%- title === 'All Teams' ? 'class="active"' : '' %>>ALL TEAMS</a>
+  </nav>
+  <main>
+    <h1>ADD PLAYERS</h1>
 
 <p>Please first ensure that the Player is not in the dropdown
     <select>

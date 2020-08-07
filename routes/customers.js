@@ -14,7 +14,7 @@ router.delete('/facts/:id', isLoggedIn, customersCtrl.delPost);
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) return next();
-        res.redirect('teams');
+        res.redirect('/');
 }
 
 module.exports = router;

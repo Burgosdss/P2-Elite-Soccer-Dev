@@ -3,7 +3,7 @@
     font-family: Helvetica;
     color: #424748;
   }
-  
+ 
   body {
     margin: 0;
     height: 100vh;
@@ -22,6 +22,9 @@
     padding: 20px;
     overflow-y: scroll;
   }
+  ul {
+    list-style-type: none;
+   }
   #show-page {
     display: grid;
     grid-template-columns: auto auto;
