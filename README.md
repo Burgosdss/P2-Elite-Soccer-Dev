@@ -25,14 +25,14 @@ A web app for creating and displaying your own Soccer Roster.
 
 # Screenshots
 
-![screenshot 0](https://imgur.com/gD4PoPv)
+![screenshot 0](https://imgur.com/gD4PoPv.png)
 
-![screenshot 1](https://imgur.com/KSzOgkc)
+![screenshot 1](https://imgur.com/KSzOgkc.png)
 
-![screenshot 2](https://imgur.com/NaVDzaL)
+![screenshot 2](https://imgur.com/NaVDzaL.png)
 
-![screenshot 3](https://imgur.com/aqsmtjV)
+![screenshot 3](https://imgur.com/aqsmtjV.png)
 
-![screenshot 4](https://imgur.com/TEfWF5M)
+![screenshot 4](https://imgur.com/TEfWF5M.png)
 
-![screenshot 5](https://imgur.com/itd7Gra)
+![screenshot 5](https://imgur.com/itd7Gra.png)
